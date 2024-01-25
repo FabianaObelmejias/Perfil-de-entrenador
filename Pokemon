@@ -1,0 +1,38 @@
+#Se le pide al usuario que decida su género
+x = input("¿Eres chico o chica?")
+w = "Bienvenid"
+
+#El programa se adapta al género introducido
+if x == "chico": 
+    w += 'o'
+else: 
+    w += 'a'
+print(w, "¡al mundo de los pokemon!")
+
+#Se le pregunta al usuario su edad
+y = int(input("¿Qué edad tienes?"))
+
+if y<10: #En caso de ser menor a 10 años, se culmina el juego
+    if x=="chico":
+        print("No tienes edad", 
+              "para ser entrenador")
+    else: 
+        print("No tienes edad",
+          "para ser entrenadora")
+    quit()
+
+#El juego sigue en caso de ser mayor a 10 años
+reg = input("Necesitarás un compañero de viaje. En qué región te encuentras?")
+if reg =="Kanto" and x == "chico":
+    print("Tu compañera de viaje es Misty!")
+else:
+   print("Tu compañero de viaje es Brook!")
+
+#El juego va avanzando según el tipo de pokemon que elijas
+tipo = input("Qué tipo de pokemon quieres para empezar?")
+if tipo == "agua":
+    print("Tu starter es Oshawott")
+elif tipo == "fuego":
+    print("Tu starter es Cyndaquil")
+else:
+    print("Tu starter es Pikachu, sigamos jugando...") #Tipo predeterminado y "culminación" de código
